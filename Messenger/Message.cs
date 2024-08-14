@@ -2,6 +2,7 @@
 
 namespace Messenger
 {
+    [Serializable]
     public class Message
     {
         public Message()
@@ -15,6 +16,7 @@ namespace Messenger
         {
             UserName = userName;
             MessageText = messageText;
+            TimeStamp = timeStamp;
         }
 
         public string UserName { get; set; }
