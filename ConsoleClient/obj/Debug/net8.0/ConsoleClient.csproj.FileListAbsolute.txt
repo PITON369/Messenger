@@ -1,0 +1,15 @@
+D:\Work\Teaching\Stepik\Messenger\ConsoleClient\bin\Debug\net8.0\ConsoleClient.exe
+D:\Work\Teaching\Stepik\Messenger\ConsoleClient\bin\Debug\net8.0\ConsoleClient.deps.json
+D:\Work\Teaching\Stepik\Messenger\ConsoleClient\bin\Debug\net8.0\ConsoleClient.runtimeconfig.json
+D:\Work\Teaching\Stepik\Messenger\ConsoleClient\bin\Debug\net8.0\ConsoleClient.dll
+D:\Work\Teaching\Stepik\Messenger\ConsoleClient\bin\Debug\net8.0\ConsoleClient.pdb
+D:\Work\Teaching\Stepik\Messenger\ConsoleClient\obj\Debug\net8.0\ConsoleClient.GeneratedMSBuildEditorConfig.editorconfig
+D:\Work\Teaching\Stepik\Messenger\ConsoleClient\obj\Debug\net8.0\ConsoleClient.AssemblyInfoInputs.cache
+D:\Work\Teaching\Stepik\Messenger\ConsoleClient\obj\Debug\net8.0\ConsoleClient.AssemblyInfo.cs
+D:\Work\Teaching\Stepik\Messenger\ConsoleClient\obj\Debug\net8.0\ConsoleClient.csproj.CoreCompileInputs.cache
+D:\Work\Teaching\Stepik\Messenger\ConsoleClient\obj\Debug\net8.0\ConsoleClient.sourcelink.json
+D:\Work\Teaching\Stepik\Messenger\ConsoleClient\obj\Debug\net8.0\ConsoleClient.dll
+D:\Work\Teaching\Stepik\Messenger\ConsoleClient\obj\Debug\net8.0\refint\ConsoleClient.dll
+D:\Work\Teaching\Stepik\Messenger\ConsoleClient\obj\Debug\net8.0\ConsoleClient.pdb
+D:\Work\Teaching\Stepik\Messenger\ConsoleClient\obj\Debug\net8.0\ConsoleClient.genruntimeconfig.cache
+D:\Work\Teaching\Stepik\Messenger\ConsoleClient\obj\Debug\net8.0\ref\ConsoleClient.dll
