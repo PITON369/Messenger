@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sQUS9pMzP7RyRZMEni2ylhPr6axOorVtETVVdhdwKbhzgMWS0I5Tjv/PZWron62GQ0u8NA7qFk6rM6Bei2QjoQ==",
+  "dgSpecHash": "v2h6h7YOYTBQB8KfZitkuvAmdj62G8hSeXCeR1lMpxFjTTxaBTRUxCmeb9Fd7tLOs5PPd9K08Okxx9vC3BxNOQ==",
   "success": true,
-  "projectFilePath": "D:\\Work\\Teaching\\Stepik\\Messenger\\ConsoleClient\\ConsoleClient.csproj",
+  "projectFilePath": "D:\\Work\\Teaching\\Stepik\\Messenger\\ConsoleClient\\MultithreadedConsoleClient.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -15,9 +15,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Work\\Teaching\\Stepik\\Messenger\\ConsoleClient\\ConsoleClient.csproj",
-      "projectName": "ConsoleClient",
-      "projectPath": "D:\\Work\\Teaching\\Stepik\\Messenger\\ConsoleClient\\ConsoleClient.csproj",
+      "projectUniqueName": "D:\\Work\\Teaching\\Stepik\\Messenger\\ConsoleClient\\MultithreadedConsoleClient.csproj",
+      "projectName": "MultithreadedConsoleClient",
+      "projectPath": "D:\\Work\\Teaching\\Stepik\\Messenger\\ConsoleClient\\MultithreadedConsoleClient.csproj",
       "packagesPath": "C:\\Users\\gulyaev\\.nuget\\packages\\",
       "outputPath": "D:\\Work\\Teaching\\Stepik\\Messenger\\ConsoleClient\\obj\\",
       "projectStyle": "PackageReference",

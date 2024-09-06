@@ -7,7 +7,7 @@ namespace ConsoleClient
     {
         // TODO debug so that there is a connection with the server. Correct the error is HTTP/1.1 408 Request Timeout.
         const int port = 5000;
-        const string address = "127.0.0.1";
+        const string address = "localhost";
         static void Main(string[] args)
         {
             Console.Write("Enter your name:");
