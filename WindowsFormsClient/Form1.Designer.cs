@@ -28,52 +28,82 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.components = new System.ComponentModel.Container();
+            this.Send = new System.Windows.Forms.Button();
+            this.MessagesLB = new System.Windows.Forms.ListBox();
+            this.UserNameTB = new System.Windows.Forms.TextBox();
+            this.MessageTB = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
-            // button1
+            // Send
             // 
-            this.button1.Location = new System.Drawing.Point(696, 399);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 49);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.Send.Location = new System.Drawing.Point(696, 399);
+            this.Send.Name = "Send";
+            this.Send.Size = new System.Drawing.Size(75, 49);
+            this.Send.TabIndex = 0;
+            this.Send.Text = "Send";
+            this.Send.UseVisualStyleBackColor = true;
+            this.Send.Click += new System.EventHandler(this.Send_Click);
             // 
-            // listBox1
+            // MessagesLB
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(12, 12);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(759, 381);
-            this.listBox1.TabIndex = 1;
+            this.MessagesLB.FormattingEnabled = true;
+            this.MessagesLB.Location = new System.Drawing.Point(12, 12);
+            this.MessagesLB.Name = "MessagesLB";
+            this.MessagesLB.Size = new System.Drawing.Size(759, 355);
+            this.MessagesLB.TabIndex = 1;
             // 
-            // textBox1
+            // UserNameTB
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 401);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(678, 20);
-            this.textBox1.TabIndex = 2;
+            this.UserNameTB.Location = new System.Drawing.Point(12, 389);
+            this.UserNameTB.Name = "UserNameTB";
+            this.UserNameTB.Size = new System.Drawing.Size(359, 20);
+            this.UserNameTB.TabIndex = 2;
             // 
-            // textBox2
+            // MessageTB
             // 
-            this.textBox2.Location = new System.Drawing.Point(13, 428);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(677, 20);
-            this.textBox2.TabIndex = 3;
+            this.MessageTB.Location = new System.Drawing.Point(13, 428);
+            this.MessageTB.Name = "MessageTB";
+            this.MessageTB.Size = new System.Drawing.Size(677, 20);
+            this.MessageTB.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(10, 373);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "label1";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(9, 412);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "label2";
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.MessageTB);
+            this.Controls.Add(this.UserNameTB);
+            this.Controls.Add(this.MessagesLB);
+            this.Controls.Add(this.Send);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -83,10 +113,13 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button Send;
+        private System.Windows.Forms.ListBox MessagesLB;
+        private System.Windows.Forms.TextBox UserNameTB;
+        private System.Windows.Forms.TextBox MessageTB;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 
