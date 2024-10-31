@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MultithreadedConsoleClient")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+306c3e71feabbeb19b52c226fe24a694a5f5ba24")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a74d81234b9cbbc607927f8ce01e58b217471a87")]
 [assembly: System.Reflection.AssemblyProductAttribute("MultithreadedConsoleClient")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MultithreadedConsoleClient")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

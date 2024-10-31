@@ -59,32 +59,38 @@ namespace ConsoleMessenger
 
         public bool SendMessage(Message msg)
         {
-            WebRequest request = WebRequest.Create("http://localhost:5000/api/Messanger");
-            request.Method = "POST";
+            try
+            {
+                WebRequest request = WebRequest.Create("http://localhost:5000/api/Messanger");
+                request.Method = "POST";
 
-            //msg = new Message("Alex", "Hi", DateTime.Now);
+                //msg = new Message("Alex", "Hi", DateTime.Now);
 
-            string postData = JsonConvert.SerializeObject(msg);
-            byte[] byteArray = Encoding.UTF8.GetBytes(postData);
-            request.ContentType = "application/json";
-            request.ContentLength = byteArray.Length;
-            Stream dataStream = request.GetRequestStream();
-            dataStream.Write(byteArray, 0, byteArray.Length);
-            dataStream.Close();
-            WebResponse response = request.GetResponse();
+                string postData = JsonConvert.SerializeObject(msg);
+                byte[] byteArray = Encoding.UTF8.GetBytes(postData);
+                request.ContentType = "application/json";
+                request.ContentLength = byteArray.Length;
+                Stream dataStream = request.GetRequestStream();
+                dataStream.Write(byteArray, 0, byteArray.Length);
+                dataStream.Close();
+                WebResponse response = request.GetResponse();
 
-            //OK
-            //Console.WriteLine($"((HttpWebResponse)response).StatusDescription = {((HttpWebResponse)response).StatusDescription}");
+                //OK
+                //Console.WriteLine($"((HttpWebResponse)response).StatusDescription = {((HttpWebResponse)response).StatusDescription}");
 
-            dataStream = response.GetResponseStream();
-            StreamReader reader = new StreamReader(dataStream);
-            string responseFromServer = reader.ReadToEnd();
+                dataStream = response.GetResponseStream();
+                StreamReader reader = new StreamReader(dataStream);
+                string responseFromServer = reader.ReadToEnd();
 
-            //Console.WriteLine($"responseFromServer = {responseFromServer}");
+                //Console.WriteLine($"responseFromServer = {responseFromServer}");
 
-            reader.Close();
-            dataStream.Close();
-            response.Close();
+                reader.Close();
+                dataStream.Close();
+                response.Close();
+            }
+            // TODO I stopped here. Finish catch and finally.
+            catch { }
+            finally { }
             return true;
         }
     }
