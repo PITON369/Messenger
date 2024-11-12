@@ -20,40 +20,51 @@ namespace ConsoleMessenger
             Console.WriteLine(output);
             Message deserializedMsg = JsonConvert.DeserializeObject<Message>(output);
             Console.WriteLine(deserializedMsg);
-            // Create the file.
-            //string path = @"d:\temp\ser.txt";
-            //using (StreamWriter sw = new StreamWriter(path, false, System.Text.Encoding.Default))
-            //{
-            //  sw.WriteLine(output);
-            //}
         }
 
-        public Message GetMessage(int MessageId)
+        public void TestNewtonsoftJsonWithWritingInFile()
         {
-            WebRequest request = WebRequest.Create("http://localhost:5000/api/Messanger/" + MessageId.ToString());
-            request.Method = "Get";
-            WebResponse response = request.GetResponse();
-            string status = ((HttpWebResponse)response).StatusDescription;
-
-            //Console.WriteLine(status);
-
-            Stream dataStream = response.GetResponseStream();
-            StreamReader reader = new StreamReader(dataStream);
-            string responseFromServer = reader.ReadToEnd();
-
-            //Console.WriteLine(responseFromServer);
-
-            reader.Close();
-            dataStream.Close();
-            response.Close();
-            if ((status.ToLower() == "ok") && (responseFromServer != "Not found"))
+            // Test JSon SerializeObject NewtonSoft
+            Message msg = new Message("Alex", "Hi", DateTime.UtcNow);
+            string output = JsonConvert.SerializeObject(msg);
+            Console.WriteLine(output);
+            // Create the file.
+            string path = @"d:\temp\ser.txt";
+            using (StreamWriter sw = new StreamWriter(path, false, System.Text.Encoding.Default))
             {
-                Message deserializedMsg = JsonConvert.DeserializeObject<Message>(responseFromServer);
-
-                //Console.WriteLine(deserializedMsg);
-
-                return deserializedMsg;
+                sw.WriteLine(output);
             }
+        }
+
+        public Message GetMessage(int messageId)
+        {
+            try
+            {
+                WebRequest request = WebRequest.Create($"http://localhost:5000/api/Messanger/{messageId}");
+                request.Method = "GET";
+
+                using (WebResponse response = request.GetResponse())
+                {
+                    string status = ((HttpWebResponse)response).StatusDescription;
+
+                    using (Stream dataStream = response.GetResponseStream())
+                    using (StreamReader reader = new StreamReader(dataStream))
+                    {
+                        string responseFromServer = reader.ReadToEnd();
+
+                        if (status.ToLower() == "ok" && responseFromServer != "Not found")
+                        {
+                            Message deserializedMsg = JsonConvert.DeserializeObject<Message>(responseFromServer);
+                            return deserializedMsg;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+
             return null;
         }
 
@@ -70,27 +81,23 @@ namespace ConsoleMessenger
                 byte[] byteArray = Encoding.UTF8.GetBytes(postData);
                 request.ContentType = "application/json";
                 request.ContentLength = byteArray.Length;
-                Stream dataStream = request.GetRequestStream();
-                dataStream.Write(byteArray, 0, byteArray.Length);
-                dataStream.Close();
-                WebResponse response = request.GetResponse();
 
-                //OK
-                //Console.WriteLine($"((HttpWebResponse)response).StatusDescription = {((HttpWebResponse)response).StatusDescription}");
-
-                dataStream = response.GetResponseStream();
-                StreamReader reader = new StreamReader(dataStream);
-                string responseFromServer = reader.ReadToEnd();
-
-                //Console.WriteLine($"responseFromServer = {responseFromServer}");
-
-                reader.Close();
-                dataStream.Close();
-                response.Close();
+                using (Stream dataStream = request.GetRequestStream())
+                {
+                    dataStream.Write(byteArray, 0, byteArray.Length);
+                }
+                using (WebResponse response = request.GetResponse())
+                using (Stream dataStream = response.GetResponseStream())
+                using (StreamReader reader = new StreamReader(dataStream))
+                {
+                    string responseFromServer = reader.ReadToEnd();
+                }
             }
-            // TODO I stopped here. Finish catch and finally.
-            catch { }
-            finally { }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+                return false;
+            }
             return true;
         }
     }
