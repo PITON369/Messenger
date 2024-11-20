@@ -29,7 +29,7 @@ namespace WindowsFormsClient
             if ((UserName.Length > 1) && (Message.Length > 1))
             {
                 Messenger.Message msg = new Messenger.Message(UserName, Message, DateTime.Now);
-                API.SendMessage(msg);
+                API.SendMessageRestSharp(msg);
             }
         }
 
