@@ -1,34 +1,32 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace ConsoleMessenger
+namespace Messenger
 {
-  [Serializable]
-  public class Message
-  {
-    public string UserName { get; set; }
-    public string MessageText { get; set; }
-    public DateTime TimeStamp { get; set; }
-
-    public Message()
+    [Serializable]
+    public class Message
     {
-      UserName = "System";
-      MessageText = "Server is running";
-      TimeStamp = DateTime.Now;
-    }
+        public Message()
+        {
+            UserName = "System";
+            MessageText = "Server is running...";
+            TimeStamp = DateTime.Now;
+        }
 
-    public Message(string userName, string messageText, DateTime timeStamp)
-    {
-      UserName = userName;
-      MessageText = messageText;
-      TimeStamp = timeStamp;
-    }
+        public Message(string userName, string messageText, DateTime timeStamp)
+        {
+            UserName = userName;
+            MessageText = messageText;
+            TimeStamp = timeStamp;
+        }
 
-    public override string ToString()
-    {
-      string output = String.Format("{0} <{2}>: {1}", UserName, MessageText, TimeStamp);
-      return output;
+        public string UserName { get; set; }
+        public string MessageText{ get; set; }
+        public DateTime TimeStamp { get; set; }
+
+        public override string? ToString()
+        {
+            string output = String.Format($"{UserName} <{TimeStamp}>: {MessageText}");
+            return output;
+        }
     }
-  }
 }

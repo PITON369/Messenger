@@ -18,7 +18,7 @@ namespace ConsoleMessenger
         private static readonly HttpClient client = new HttpClient();
         public void TestNewtonsoftJson()
         {
-            // Test JSon SerializeObject NewtonSoft
+            // Test Json SerializeObject NewtonSoft
             Message msg = new Message("Alex", "Hi", DateTime.UtcNow);
             string output = JsonConvert.SerializeObject(msg);
             Console.WriteLine(output);
@@ -28,7 +28,7 @@ namespace ConsoleMessenger
 
         public void TestNewtonsoftJsonWithWritingInFile()
         {
-            // Test JSon SerializeObject NewtonSoft
+            // Test Json SerializeObject NewtonSoft
             Message msg = new Message("Alex", "Hi", DateTime.UtcNow);
             string output = JsonConvert.SerializeObject(msg);
             Console.WriteLine(output);
