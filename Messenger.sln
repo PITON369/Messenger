@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultithreadedConsoleClient"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsClient", "WindowsFormsClient\WindowsFormsClient.csproj", "{6720EA29-7396-4D46-A833-F5B41D53483B}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleMessengerWithGUI", "ConsoleMessengerWithGUI\ConsoleMessengerWithGUI.csproj", "{A622EF45-923D-4380-9566-718CDC7F8F1B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{6720EA29-7396-4D46-A833-F5B41D53483B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6720EA29-7396-4D46-A833-F5B41D53483B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6720EA29-7396-4D46-A833-F5B41D53483B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A622EF45-923D-4380-9566-718CDC7F8F1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A622EF45-923D-4380-9566-718CDC7F8F1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A622EF45-923D-4380-9566-718CDC7F8F1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A622EF45-923D-4380-9566-718CDC7F8F1B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
