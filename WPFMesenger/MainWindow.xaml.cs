@@ -37,7 +37,7 @@ namespace WPFMesenger
 
     private void Timer_Tick(object sender, object e)
     {
-      ConsoleMessenger.Message msg = API.GetMessage(MessageID);
+      Messenger.Message msg = API.GetMessage(MessageID);
       while (msg != null)
       {
         MessagesLB.Items.Add(msg);
@@ -52,7 +52,7 @@ namespace WPFMesenger
       string Message = MessageTB.Text;
       if ((UserName.Length > 1) && (UserName.Length > 1))
       {
-        ConsoleMessenger.Message msg = new ConsoleMessenger.Message(UserName, Message, DateTime.Now);
+        var msg = new Messenger.Message(UserName, Message, DateTime.Now);
         API.SendMessage(msg);
       }
     }
