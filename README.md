@@ -1,0 +1,1 @@
+The server is in C#, Python, and GoLang. Clients in C# (WM, WP, UWP), Python (PyQt 6) and JavaScript based on the browser framework Vue.js (axis, vuetify). Based on the course: https://stepik.org/course/182501/info
